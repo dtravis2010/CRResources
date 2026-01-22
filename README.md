@@ -58,6 +58,11 @@ npm run build
 
 Deploy with the output in `dist/`. You can publish the `dist` folder using GitHub Pages settings or a `gh-pages` action.
 
+### GitHub Actions (recommended)
+1. Push to the default branch (`main`, `master`, or `work`).
+2. In GitHub, go to **Settings → Pages** and set **Source** to **GitHub Actions**.
+3. The included workflow at `.github/workflows/deploy-pages.yml` will build and deploy automatically on push.
+
 ## Notes / assumptions
 - Supervisor password is hard-coded (`1234`) for MVP only.
 - If Firebase is not configured, the app uses local seed data and writes are in-memory only.
