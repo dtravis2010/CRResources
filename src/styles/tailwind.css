@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-title {
+    font-size: 18px;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+}
+
+.schedule-grid {
+  border-collapse: collapse;
+}
+
+.schedule-grid th,
+.schedule-grid td {
+  border: 1px solid #8dcbe6;
+  padding: 6px 8px;
+  min-width: 120px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+.schedule-grid th {
+  background: #08a9e6;
+  color: white;
+  font-weight: 600;
+}
+
+.schedule-grid .team-header {
+  background: #9a6a1d;
+  color: white;
+  font-weight: 700;
+}
+
+.schedule-grid .subheader {
+  font-size: 10px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.schedule-grid .name-cell {
+  font-weight: 600;
+  text-align: left;
+}
+
+.schedule-grid .off-row td,
+.schedule-grid .off-row th {
+  background: #fff6d6;
+}
+
+.schedule-grid .highlight-cell {
+  background: #fff2cc;
+  border-color: #f4b183;
+}
+
+.schedule-grid .warning-cell {
+  background: #ffe2e2;
+  border-color: #ef4444;
+}
+
+.schedule-input {
+  width: 100%;
+  border: 1px solid transparent;
+  background: transparent;
+  text-align: center;
+  font-size: 12px;
+}
+
+.schedule-input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  background: #f0f9ff;
+}
+
+.section-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  background: white;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
