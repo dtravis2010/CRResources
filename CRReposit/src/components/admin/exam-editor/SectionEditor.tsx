@@ -1,13 +1,13 @@
 'use client';
-import { Section, Entity } from '@/types';
+import { ExamSection, Entity } from '@/types';
 import { useState } from 'react';
 import { Trash2, Plus, ChevronDown, ChevronRight, X } from 'lucide-react';
 import clsx from 'clsx';
 
 interface SectionEditorProps {
-    section: Section;
+    section: ExamSection;
     entities: Entity[];
-    onChange: (updated: Section) => void;
+    onChange: (updated: ExamSection) => void;
     onDelete: () => void;
 }
 

@@ -1,5 +1,5 @@
 'use client';
-import { Section, Entity, ExamVariant } from '@/types';
+import { ExamSection, Entity, ExamVariant } from '@/types';
 import SectionEditor from './SectionEditor';
 import { useState } from 'react';
 import { Trash2, Plus, Layers } from 'lucide-react';
@@ -13,7 +13,7 @@ interface VariantEditorProps {
 
 export default function VariantEditor({ variant, entities, onChange, onDelete }: VariantEditorProps) {
     const handleAddSection = () => {
-        const newSection: Section = {
+        const newSection: ExamSection = {
             id: crypto.randomUUID(),
             title: 'New Section',
             content: '',
@@ -25,7 +25,7 @@ export default function VariantEditor({ variant, entities, onChange, onDelete }:
         });
     };
 
-    const handleSectionChange = (index: number, updatedSection: Section) => {
+    const handleSectionChange = (index: number, updatedSection: ExamSection) => {
         const newSections = [...variant.sections];
         newSections[index] = updatedSection;
         onChange({ ...variant, sections: newSections });
